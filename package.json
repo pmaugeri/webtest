@@ -1,0 +1,20 @@
+{
+  "name": "jest-lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "verbose": true
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "jest-puppeteer": "^3.7.0",
+    "puppeteer": "^1.11.0"
+  }
+}
