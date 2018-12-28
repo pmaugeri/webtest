@@ -2,12 +2,19 @@ FROM ubuntu
 
 ENV workdir='/root/webtest/'
 
+# Create folders
+RUN mkdir $workdir
+RUN mkdir $workdir/lib
+RUN mkdir $workdir/__tests__
+
+
+WORKDIR $workdir
+
+
 RUN apt-get upgrade
 RUN apt-get update
 RUN apt-get -y install nodejs npm wget vim
 
-RUN mkdir $workdir
-WORKDIR $workdir
 
 RUN npm init -y
 RUN npm install --save-dev jest-puppeteer puppeteer jest
@@ -28,7 +35,6 @@ RUN apt-get update
 RUN apt-get install -y google-chrome-stable
 
 # Add libraries
-RUN mkdir $workdir/lib
 COPY lib/AkamaiPragmaHeaders.js $workdir/lib
 
 
