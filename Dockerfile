@@ -7,15 +7,14 @@ RUN mkdir $workdir
 RUN mkdir $workdir/lib
 RUN mkdir $workdir/__tests__
 
-
 WORKDIR $workdir
 
-
+#
+# Add main packages 
+#
 RUN apt-get upgrade
 RUN apt-get update
 RUN apt-get -y install nodejs npm wget vim
-
-
 RUN npm init -y
 RUN npm install --save-dev jest-puppeteer puppeteer jest
 
@@ -25,6 +24,9 @@ COPY puppeteer_environment.js $workdir
 COPY setup.js $workdir
 COPY teardown.js $workdir
 
+#
+# Include a simple test suite example
+#
 COPY sum.js $workdir
 COPY sum.test.js $workdir
 
