@@ -42,7 +42,7 @@ You can add a persistent Docker volume to store your test suites. The volume is 
 $ docker run --mount source=tests-volume,target=/root/webtest/__tests__ -it webtest
 ```
 
-This Docker image can be retrieved directly from Docker hub (>500MB):
+This Docker image can be retrieved directly from [Docker hub](https://cloud.docker.com/repository/docker/pmaugeri/webtest) (>500MB):
 
 ```
 $ docker run --mount source=tests-volume,target=/root/webtest/__tests__ -it pmaugeri/webtest:version1
