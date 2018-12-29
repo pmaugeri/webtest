@@ -39,4 +39,6 @@ RUN apt-get install -y google-chrome-stable
 # Add libraries
 COPY lib/AkamaiPragmaHeaders.js $workdir/lib
 
+# Add Test Suite Examples
+COPY __tests__/ak-example1.test.js $workdir/__tests__
 
