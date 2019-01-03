@@ -17,7 +17,7 @@ The docker image comes with a simple test suite called **sum.test.js** that exec
 
 ```
 $ docker run -it webtest
-root@1a10e5d7e98c:~/webtest# npm test
+root@1a10e5d7e98c:~/webtest# npm test -t sum.test.js
 
 > jest-lab@1.0.0 test /root/webtest
 > jest
